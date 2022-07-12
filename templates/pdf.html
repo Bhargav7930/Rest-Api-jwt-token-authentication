@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <table class="table">
+        <thead>
+            <th> {{today}} </th>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Father_Name</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for student in student_objs %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{student.name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.father_name}}</td>
+            <td>{{student.address}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
